@@ -4,17 +4,6 @@ function open_letter() {
 }
 
 // Import the data to customize and insert them into page
-const fetchData = () => {
-    fetch("../customize.json")
-        .then(data => data.json())
-        .then(data => {
-            Object.keys(data).map(customData => {
-                if (data[customData] !== "") {
-                    document.getElementById(customData).innerText = data[customData];
-                }
-            });
-        });
-};
 
 const resolveFetch = () => {
     return new Promise((resolve, reject) => {
